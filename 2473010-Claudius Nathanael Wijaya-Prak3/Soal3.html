@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <table style="border: 1px solid black; width: 400px;">
+        <form>
+            <tr>
+                <td colspan="3" align="center">
+                    <h1>Form Tambah Data User</h1>    
+                </td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td>:</td>
+                <td><input type="text" name="name" required 
+                        oninvalid="this.setCustomValidity('Name is required!!!')"
+                        oninput="this.setCustomValidity('')"></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td>:</td>
+                <td>
+                    <input type="text" name="address" required
+                        oninvalid="this.setCustomValidity('Address is required!!!')"
+                        oninput="this.setCustomValidity('')">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Email</td>
+                <td>:</td>
+                <td>
+                    <input type="email" name="email" required
+                        oninvalid="this.setCustomValidity('Harap isi bidang ini.')"
+                        oninput="this.setCustomValidity('')">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Home Page</td>
+                <td>:</td>
+                <td>
+                    <input type="url" name="homepage">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Birthday</td>
+                <td>:</td>
+                <td>
+                    <input type="date" name="birthday">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Favorit Color</td>
+                <td>:</td>
+                <td>
+                    <input type="color" name="favcolor">
+                </td>
+            </tr>
+
+            <tr>
+                <td>IPK</td>
+                <td>:</td>
+                <td>
+                    <input type="number" name="ipk" min="0" max="4" step="0.1" value="0">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Phone Number</td>
+                <td>:</td>
+                <td>
+                    <input type="text" name="phone" pattern="[0-9]{3}-[0-9]{7,10}"
+                        title="Format: ###-####### sampai ###-##########">
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td>
+                    <input type="submit" value="Add">
+                </td>
+            </tr>
+
+        </form>
+    </table>
+</body>
+
+</html>
