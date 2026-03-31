@@ -1,0 +1,88 @@
+<!--Claudius Nathanael Wijaya-->
+<!--2473010-->
+<!--31/03/2026-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Star</title>
+</head>
+<style>
+    body {
+        background-color: #eee;
+    }
+
+    table {
+        margin: auto;
+        margin-top: 100px;
+    }
+
+    .box {
+        width: 220px;
+        height: 220px;
+        position: relative;
+        background:
+            linear-gradient(#FF0000, #FF0000) top left,
+            linear-gradient(#FF0000, #FF0000) top left,
+
+            linear-gradient(#FF0000, #FF0000) top right,
+            linear-gradient(#FF0000, #FF0000) top right,
+
+            linear-gradient(#FF0000, #FF0000) bottom left,
+            linear-gradient(#FF0000, #FF0000) bottom left,
+
+            linear-gradient(#FF0000, #FF0000) bottom right,
+            linear-gradient(#FF0000, #FF0000) bottom right;
+        background-repeat: no-repeat;
+
+        background-size:
+            40px 5px, 5px 40px,
+            40px 5px, 5px 40px,
+            40px 5px, 5px 40px,
+            40px 5px, 5px 40px;
+    }
+
+    a:hover .box {
+        background:
+            linear-gradient(#FF00FF, #FF00FF) top left,
+            linear-gradient(#FF00FF, #FF00FF) top left,
+
+            linear-gradient(#FF00FF, #FF00FF) top right,
+            linear-gradient(#FF00FF, #FF00FF) top right,
+
+            linear-gradient(#FF00FF, #FF00FF) bottom left,
+            linear-gradient(#FF00FF, #FF00FF) bottom left,
+
+            linear-gradient(#FF00FF, #FF00FF) bottom right,
+            linear-gradient(#FF00FF, #FF00FF) bottom right;
+
+        background-repeat: no-repeat;
+    }
+
+    img {
+        width: 140px;
+        position: absolute;
+        top: 40px;
+        left: 40px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+</style>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <a href="#">
+                    <div class="box">
+                        <img src="./src/star.jpg" alt="star">
+                    </div>
+                </a>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
