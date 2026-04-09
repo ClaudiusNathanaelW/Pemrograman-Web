@@ -1,0 +1,55 @@
+<!--Claudius Nathanael Wijaya-->
+<!--2473010-->
+<!--07/04/2026-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function generatePyramid() {
+            let tinggi = document.getElementById("tinggi").value;
+            let table = document.getElementById("pyramid");
+
+            table.innerHTML = "";
+
+            tinggi = parseInt(tinggi);
+            for (let i = 1; i <= tinggi; i++) {
+                let row = table.insertRow();
+                for (let j = 1; j <= (2 * tinggi - 1); j++) {
+                    let cell = row.insertCell();
+
+                    if (j >= tinggi - (i - 1) && j <= tinggi + (i - 1)) {
+                        cell.style.backgroundColor = "orange";
+                    } else {
+                        cell.style.backgroundColor = "white";
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<style>
+    table {
+        width: 800px;
+        height: 600px;
+        border-collapse: collapse;
+    }
+
+    td {
+        border: 1px solid white;
+    }
+</style>
+</head>
+
+<body>
+    <p>Tinggi Piramida: </p>
+    <input type="text" id="tinggi">
+    <br>
+    <button onclick="generatePyramid()">Proses</button>
+
+    <br><br>
+
+    <table id="pyramid"></table>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!--Claudius Nathanael Wijaya-->
+<!--2473010-->
+<!--07/04/2026-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        let num;
+        while (true) {
+            let input = prompt("A number?");
+
+            if (!isNaN(input) && input !== "") {
+                num = parseInt(input);
+                break;
+            }
+        }
+
+        function generateTable() {
+            let table = document.getElementById("myTable");
+
+            for (let i = 1; i <= num; i++) {
+                let row = table.insertRow();
+
+                row.insertCell(0).innerHTML = i;
+                row.insertCell(1).innerHTML = "x";
+                row.insertCell(2).innerHTML = num;
+                row.insertCell(3).innerHTML = "=";
+                row.insertCell(4).innerHTML = i * num;
+            }
+        }
+
+        window.onload = generateTable;
+    </script>
+
+    <style>
+        td {
+            border: 2px solid black;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            font-size: 2em;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="myTable"></table>
+</body>
+
+</html>
