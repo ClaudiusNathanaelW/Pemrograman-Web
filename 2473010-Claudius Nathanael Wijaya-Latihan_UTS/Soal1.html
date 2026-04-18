@@ -1,0 +1,94 @@
+<!--Latihan UTS-->
+<!--Claudius Nathanael Wijaya-->
+<!--18/04/2026-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Keyboard</title>
+        <link rel="stylesheet" href="Soal1.css">
+        <script>
+            function typeshitdesuwa(char){
+                let textarea = document.getElementById("input");
+                textarea.value += char
+            }
+        </script>
+    </head>
+    <body>
+        <textarea name="input" id="input" 
+        placeholder="Ketik disini atau gunakan keyboard di bawah..."></textarea>
+        <table>
+            <tr>
+            <td id="double" onclick="typeshitdesuwa('~')">~</td>
+                <td id="double" onclick="typeshitdesuwa('1')">1</td>
+                <td onclick="typeshitdesuwa('2')">2</td>
+                <td onclick="typeshitdesuwa('3')">3</td>
+                <td onclick="typeshitdesuwa('4')">4</td>
+                <td onclick="typeshitdesuwa('5')">5</td>
+                <td onclick="typeshitdesuwa('6')">6</td>
+                <td onclick="typeshitdesuwa('7')">7</td>
+                <td onclick="typeshitdesuwa('8')">8</td>
+                <td onclick="typeshitdesuwa('9')">9</td>
+                <td onclick="typeshitdesuwa('0')">0</td>
+                <td onclick="typeshitdesuwa('-')">-</td>
+                <td onclick="typeshitdesuwa('=')">=</td>
+                <td id="hl" colspan="2">Backspace</td>
+            </tr>
+            <tr>
+                <td id="hl" colspan="2">Tab</td>
+                <td onclick="typeshitdesuwa('q')">Q</td>
+                <td onclick="typeshitdesuwa('w')">W</td>
+                <td onclick="typeshitdesuwa('e')">E</td>
+                <td onclick="typeshitdesuwa('r')">R</td>
+                <td onclick="typeshitdesuwa('t')">T</td>
+                <td onclick="typeshitdesuwa('y')">Y</td>
+                <td onclick="typeshitdesuwa('u')">U</td>
+                <td onclick="typeshitdesuwa('i')">I</td>
+                <td onclick="typeshitdesuwa('o')">O</td>
+                <td onclick="typeshitdesuwa('p')">P</td>
+                <td onclick="typeshitdesuwa('\[')">[</td>
+                <td id="double" onclick="typeshitdesuwa('\]')">]</td>
+                <td id="double" onclick="typeshitdesuwa('\\')" >\</td>
+            </tr>
+            <tr>
+                <td id="hl" colspan="2">Caps Lock</td>
+                <td onclick="typeshitdesuwa('a')">A</td>
+                <td onclick="typeshitdesuwa('s')">S</td>
+                <td onclick="typeshitdesuwa('d')">D</td>
+                <td onclick="typeshitdesuwa('f')" >F</td>
+                <td onclick="typeshitdesuwa('g')">G</td>
+                <td onclick="typeshitdesuwa('h')">H</td>
+                <td onclick="typeshitdesuwa('j')">J</td>
+                <td onclick="typeshitdesuwa('k')">K</td>
+                <td onclick="typeshitdesuwa('l')">L</td>
+                <td onclick="typeshitdesuwa(';')">;</td>
+                <td onclick="typeshitdesuwa('\'')">'</td>
+                <td id="hl" colspan="2">Enter</td>
+            </tr>
+            <tr>
+                <td id="hl" colspan="2">Shift</td>
+                <td onclick="typeshitdesuwa('z')">Z</td>
+                <td onclick="typeshitdesuwa('x')">X</td>
+                <td onclick="typeshitdesuwa('c')">C</td>
+                <td onclick="typeshitdesuwa('v')">V</td>
+                <td onclick="typeshitdesuwa('b')">B</td>
+                <td onclick="typeshitdesuwa('n')">N</td>
+                <td onclick="typeshitdesuwa('m')">M</td>
+                <td onclick="typeshitdesuwa(',')">,</td>
+                <td onclick="typeshitdesuwa('.')">.</td>
+                <td onclick="typeshitdesuwa('/')">/</td>
+                <td id="hl" colspan="4">Shift</td>
+            </tr>
+            <tr>
+                <td id="double">Ctrl</td>
+                <td id="double">Alt</td>
+                <td id="hl" colspan="11" onclick="typeshitdesuwa(' ')">Space</td>
+                <td id="double">Ctrl</td>
+                <td id="double">Alt</td>
+            </tr>
+        </table>
+        <footer>
+            <hr>
+            <p>&copy; NRP Nama - Text Editor</p>
+        </footer>
+    </body>
+</html>

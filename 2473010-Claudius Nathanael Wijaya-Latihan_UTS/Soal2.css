@@ -1,0 +1,56 @@
+/*
+        Song used while cooking: 
+        Matushka - https://www.youtube.com/watch?v=8mtxEbvzkHs&list=RD8mtxEbvzkHs&start_radio=1
+        I Will Survive - https://www.youtube.com/watch?v=VPStmeD17xk&list=RD8mtxEbvzkHs&index=2
+        Canon in D (Pachelbel's Canon) - https://www.youtube.com/watch?v=Ptk_1Dc2iPY&list=RDPtk_1Dc2iPY&start_radio=1
+        Mahoyo (Kuonji Alice) - https://www.youtube.com/watch?v=z5FjiEhPS8k&list=RDPtk_1Dc2iPY&index=3
+        Light of Friendship - https://www.youtube.com/watch?v=G5o3iGrWh8k&list=RDG5o3iGrWh8k&start_radio=1 
+        Wo Duo Xihuan Ni Hui Zhidao - https://www.youtube.com/watch?v=08hiSR9_hBM&list=RD08hiSR9_hBM&start_radio=1
+*/
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+}
+
+pre {
+    display: inline;
+}
+
+th {
+    padding: 10px;
+    border: 2px black double;
+    background-color: gray;
+    color: white;
+}
+
+td {
+    border: 2px black double;
+}
+
+table {
+    border-collapse: collapse;
+
+}
+
+img {
+    width: 80px;
+    height: 90px;
+}
+
+#green {
+    background-color: rgb(127, 220, 132);
+}
+
+#sp1 {
+    position: absolute;
+    bottom: 27%;
+}
+#sp2 {
+    color: white;
+    background-color: gray;
+    position: absolute;
+    top: 25%;
+    left: 82.5%;
+}

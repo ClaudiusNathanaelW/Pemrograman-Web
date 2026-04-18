@@ -1,0 +1,84 @@
+/*
+        Playlist - https://youtube.com/playlist?list=LRSRARviNY8wm6Sj8v1bnTPe_ig5scquyNt5J&si=LEvEMz6ytMH2oIpD
+        Esoa - https://www.youtube.com/watch?v=mPjXv28PWew&list=RDmPjXv28PWew&start_radio=1
+        Dance with STEEL BALL RUN - https://www.youtube.com/watch?v=AFZFhMyiSZ8&list=RDAFZFhMyiSZ8&start_radio=1
+*/
+body {
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1 {
+    color: black;
+    font-size: 3em
+}
+
+#box {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    left: 10px;
+    background-color: #F09C1D;
+    height: 90px;
+}
+
+h1 {
+    position: absolute;
+    top: -15px;
+    left: 30%;
+}
+
+table {
+    border-collapse: collapse;
+    position: absolute;
+    top: 20%;
+    width: 540px;
+    height: 420px;
+}
+
+td {
+    width: 30px;
+    height: 30px;
+}
+
+.empty {
+    background-color: transparent;
+}
+
+.outline {
+    background-color: #402D26;
+}
+
+.bread {
+    background-color: #F09C1D;
+}
+
+.eye {
+    background-color: white;
+}
+
+.blush {
+    background-color: #F0212E;
+}
+
+.meat {
+    background-color: #785010;
+}
+
+.veggies {
+    background-color: #91E81C;
+}
+
+#box2 {
+    float: right;
+    background-color: #F09C1D;
+    border-radius: 5%;
+    width: 500px;
+    height: 320px;
+    margin-top: 150px;
+    margin-right: 10%;
+}
+
+ul {
+    color: white;
+    font-size: 18px;
+}

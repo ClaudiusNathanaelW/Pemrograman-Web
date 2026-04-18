@@ -1,0 +1,54 @@
+/*
+NOTE
+Every input works except SHIFT, ENTER, CTLR, ALT, BACKSPACE, TAB, CAPS LOCK
+Song used while cooking: 
+Crazy For You - https://www.youtube.com/watch?v=sE6X-ecBqk4&list=RDsE6X-ecBqk4&start_radio=1&pp=oAcB
+Mou Koi Nante Shitai - https://www.youtube.com/watch?v=naz0-szzYXk&list=RDnaz0-szzYXk&start_radio=1
+*/
+body {
+    background-color: #323437;
+    margin: 0px;
+    padding: 0px;
+}
+
+#input {
+    margin-left: 115px;
+    margin-bottom: 20px;
+    border: 1px #e2b714 solid;
+    color: white;
+    background-color: #323437;
+    height: 150px;
+    width: 80%;
+}
+
+#hl {
+    color: aqua;
+}
+
+#double {
+    width: 80px;
+}
+
+td {
+    padding: 16px;
+    padding-right: 17px;
+    border: 2px #e2b714 solid;
+    color: #e2b714;
+    text-align: center;
+}
+
+table {
+    display: grid;
+    place-items: center;
+    margin-bottom: 8%;
+    border-collapse: collapse;
+}
+
+hr {
+    border: 1px #e2b714 solid;
+}
+
+p {
+    color: white;
+    text-align: center;
+}
