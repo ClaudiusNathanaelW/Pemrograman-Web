@@ -1,0 +1,81 @@
+<!--Claudius Nathanael Wijaya-->
+<!--2473010-->
+<!--14/04/2026-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function hovering(id) {
+            document.getElementById(id).className = "c3";
+        }
+
+        function unhovering(id, originalClass) {
+            document.getElementById(id).className = originalClass;
+        }
+    </script>
+</head>
+<style>
+    th {
+        background-color: rgba(128, 128, 128, 0.441);
+    }
+
+    .blue {
+        background-color: rgb(123, 236, 236);
+    }
+
+    .bisque {
+        background-color: bisque;
+    }
+
+    .c3 {
+        background-color: rgba(172, 255, 47, 0.831);
+    }
+</style>
+
+<body>
+    <table>
+        <tr>
+            <th>Position</th>
+            <th>Programming Language</th>
+            <th>Ratings</th>
+        </tr>
+        <tr id="row1" class="blue"
+            onmouseover="hovering('row1')"
+            onmouseout="unhovering('row1','blue')">
+            <td>1</td>
+            <td>C</td>
+            <td>18.058%</td>
+        </tr>
+        <tr id="row2" class="bisque"
+            onmouseover="hovering('row2')"
+            onmouseout="unhovering('row2','bisque')">
+            <td>2</td>
+            <td>Java</td>
+            <td>18.051%</td>
+        </tr>
+        <tr id="row3" class="blue"
+            onmouseover="hovering('row3')"
+            onmouseout="unhovering('row3','blue')">
+            <td>3</td>
+            <td>C++</td>
+            <td>9.707%</td>
+        </tr>
+        <tr id="row4" class="bisque"
+            onmouseover="hovering('row4')"
+            onmouseout="unhovering('row4','bisque')">
+            <td>4</td>
+            <td>PHP</td>
+            <td>9.662%</td>
+        </tr>
+        <tr id="row5" class="blue"
+            onmouseover="hovering('row5')"
+            onmouseout="unhovering('row5','blue')">
+            <td>5</td>
+            <td>(Visual) Basic</td>
+            <td>6.392%</td>
+        </tr>
+    </table>
+</body>
+
+</html>

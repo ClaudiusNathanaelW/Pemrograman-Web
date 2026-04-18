@@ -1,0 +1,50 @@
+<!--Claudius Nathanael Wijaya-->
+<!--2473010-->
+<!--14/04/2026-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function Call(ob) {
+            let obval = ob.value;
+        
+            if (obval.length > 256){
+                obval = obval.substr(0,256)
+                ob.value = obval;
+            }
+
+            document.getElementById("counter").value = obval.length +"/256"
+        }
+    </script>
+</head>
+<style>
+    p, pre {
+        display: inline;
+    }
+
+    #txt2 {
+        overflow-y: scroll;
+        position: static;
+
+    }
+
+    #counter{
+        text-align: right;
+        width: 60px;
+        position: absolute;
+        left: 250px;
+    }
+</style>
+
+<body>
+    <pre>Judul    : </pre><input type="text">
+    <br>
+    <pre>Deskripsi: </pre><textarea id="txt2" rows="5" cols="30" maxlength="256" 
+        onkeyup="Call(this)"
+        onkeydown="Call(this)"></textarea>
+        <br>
+    <input type="text" id="counter" value="0/256" readonly>
+</body>
+
+</html>

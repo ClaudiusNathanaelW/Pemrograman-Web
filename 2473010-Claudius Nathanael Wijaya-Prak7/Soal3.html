@@ -1,0 +1,83 @@
+<!--Claudius Nathanael Wijaya-->
+<!--2473010-->
+<!--14/04/2026-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        let array = [];
+        function add() {
+            let input = document.getElementById("input");
+            let value = Number(input.value); 
+
+            array.push(value);
+            console.log(array);
+
+            input.value = "";
+        }
+        function process(action) {
+            let hasil = document.getElementById("hasil");
+            if (action === "display") {
+                hasil.value = array.join(", ");
+
+            } else if (action === "count") {
+                hasil.value = array.length;
+
+            } else if (action === "sum") {
+                let sum = array.reduce((a, b) => a + b, 0);
+                hasil.value = sum;
+
+            } else if (action === "avg") {
+                let avg = array.length ?
+                    array.reduce((a, b) => a + b, 0) / array.length : 0;
+                hasil.value = avg;
+
+            } else if (action === "max") {
+                hasil.value = Math.max(...array);
+
+            } else if (action === "min") {
+                hasil.value = Math.min(...array);
+
+            } else if (action === "ganjil") {
+                hasil.value = array.filter(x => x % 2 !== 0).join(", ");
+
+            } else if (action === "genap") {
+                hasil.value = array.filter(x => x % 2 === 0).join(", ");
+
+            } else if (action === "hapus") {
+                array = [];
+                hasil.value = "";
+            }
+        }
+
+    </script>
+</head>
+<style>
+    pre {
+        display: inline;
+    }
+</style>
+
+<body>
+    <pre>Data</pre> <input id="input" type="number">
+    <br>
+    <input type="button" value="Add" onclick=add()>
+    <select onchange="process(this.value)">
+        <option value="">Pilih Operasi</option>
+        <option value="display">Display</option>
+        <option value="count">Count</option>
+        <option value="sum">Sum</option>
+        <option value="avg">Average</option>
+        <option value="max">Max</option>
+        <option value="min">Min</option>
+        <option value="ganjil">Ganjil</option>
+        <option value="genap">Genap</option>
+        <option value="hapus">Hapus</option>
+    </select>
+    <br>
+    <pre>Hasil</pre> <input id="hasil" type="text" readonly>
+
+</body>
+
+</html>
