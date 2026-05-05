@@ -1,0 +1,55 @@
+<!--Claudius Nathanael Wijaya-->
+<!--2473010-->
+<!--05/05/2026-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        #container {
+            margin-top: 15px;
+            font-family: Arial, sans-serif;
+        }
+
+        .nama-item {
+            margin-bottom: 5px;
+            display: block;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn-add").click(function () {
+                let nama = $("#input").val().trim();
+
+                if (nama !== "") {
+                    $("<div class='nama-item'>" + nama + "</div>").appendTo("#container");
+
+                    $("#input").val("").focus();
+                }
+            });
+
+            $("#btn-search").click(function () {
+                let search = $("#input").val().trim();
+
+                $(".nama-item").css("text-decoration", "none");
+
+                if (search !== "") {
+                    $(".nama-item:contains('" + search + "')").css("text-decoration", "underline");
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <input type="text" id="input">
+    <button id="btn-add">Add</button>
+    <button id="btn-search">Search</button>
+
+    <div id="container"></div>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!--Claudius Nathanael Wijaya-->
+<!--2473010-->
+<!--05/05/2026-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        #app-container {
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 320px;
+        }
+
+        #searchBox {
+            width: 90%;
+            padding: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #aaa;
+        }
+
+        .company-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .company-item {
+            margin-bottom: 4px;
+            font-size: 15px;
+            color: black;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            $("#searchBox").on("input", function () {
+                let keyword = $(this).val().toLowerCase();
+
+                $(".company-item").css("color", "black");
+
+                if (keyword !== "") {
+                    $(".company-item").each(function () {
+                        let companyName = $(this).text().toLowerCase();
+
+                        if (companyName.includes(keyword)) {
+                            $(this).css("color", "red");
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="app-container">
+        <input type="text" id="searchBox">
+
+        <ul class="company-list">
+            <li class="company-item">Sun Microsystem</li>
+            <li class="company-item">Apache Software Foundation</li>
+            <li class="company-item">Oracle Coorporation</li>
+            <li class="company-item">International Bussiness Machines</li>
+            <li class="company-item">Microsoft Coorporation</li>
+            <li class="company-item">Apple Inc</li>
+            <li class="company-item">Sap Ag</li>
+            <li class="company-item">Accenture</li>
+            <li class="company-item">Computer Sciences Coorporation</li>
+            <li class="company-item">Google</li>
+            <li class="company-item">Softbank</li>
+            <li class="company-item">Yahoo</li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!--Claudius Nathanael Wijaya-->
+<!--2473010-->
+<!--05/05/2026-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $("div").click(function () {
+
+                $("div").css("background", "").removeAttr("id");
+
+                $(this).css("background", "red")
+                    .attr("id", "selected");
+            });
+
+            $("button").click(function () {
+
+                $("div").each(function (index, domEle) {
+
+                    if ($(domEle).attr("id") === "selected") {
+                        return false;
+                    }
+
+                    $(domEle).css("background", "yellow");
+                });
+
+            });
+
+        });
+    </script>
+    <style>
+        div {
+            width: 40px;
+            height: 40px;
+            margin: 5px;
+            margin-top: 50px;
+            float: left;
+            border: 2px solid blue;
+            text-align: center;
+
+        }
+
+        span {
+            color: red;
+        }
+
+        button {
+            position: absolute;
+            left: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <button>Change Colors</button>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+
+</html>
