@@ -1,0 +1,164 @@
+<!--Claudius Nathanael Wijaya-->
+<!--2473010-->
+<!--12/05/2026-->
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <style>
+        body {
+            font-family: "Times New Roman", serif;
+        }
+
+        #container {
+            width: 700px;
+            border: 1px solid gray;
+            margin-top: 20px;
+        }
+
+        #header {
+            text-align: center;
+            padding: 20px;
+            border-bottom: 1px solid gray;
+        }
+
+        #header a {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .item {
+            padding: 10px;
+        }
+
+        .title a {
+            color: blue;
+        }
+
+        .date {
+            font-style: italic;
+        }
+
+        .footer {
+            padding: 5px;
+            border-top: 1px solid gray;
+        }
+
+        table {
+            margin-bottom: 20px;
+        }
+
+        input[type=text] {
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table border="1" cellpadding="5">
+        <tr>
+            <td><input type="text" id="title" placeholder="Title" readonly></td>
+        </tr>
+
+        <tr>
+            <td><input type="text" id="content" placeholder="Content" readonly></td>
+        </tr>
+
+        <tr>
+            <td><input type="text" id="generator" placeholder="Generator" readonly></td>
+        </tr>
+    </table>
+
+    <button onclick="loadJSON()">Look</button>
+
+    <br><br>
+
+    <div id="hasil"></div>
+
+    <script>
+        function loadJSON() {
+            fetch("SIJson.js")
+                .then(response => response.text()) 
+                .then(textData => {
+
+                    let cleanText = textData.trim();
+                    if (cleanText.endsWith(';')) {
+                        cleanText = cleanText.slice(0, -1);
+                    }
+
+                    let jsonData = JSON.parse(cleanText);
+
+                    document.getElementById("title").value = jsonData.title;
+                    document.getElementById("content").value = jsonData.items.length + " Data";
+                    document.getElementById("generator").value = jsonData.generator;
+
+                    let output = "";
+
+                    output += `
+                    <div id="container">
+
+                        <div id="header">
+                            <a href="${jsonData.link}">
+                                ${jsonData.title}
+                            </a>
+                        </div>
+                    `;
+
+                    jsonData.items.forEach(item => {
+
+                        output += `
+                        <div class="item">
+
+                            <div class="title">
+                                <a href="${item.link}">
+                                    ${item.title}
+                                </a>
+                            </div>
+
+                            <div>
+                                By : ${item.author} /
+                                <span class="date">${item.published}</span>
+                            </div>
+
+                            <br>
+
+                            <div>
+                                ${item.description}
+                            </div>
+
+                            <br>
+
+                            <div>
+                                Universitas :
+                                <a href="${item.universitas.m}">
+                                    Click Here
+                                </a>
+                            </div>
+
+                            <div>
+                                Tag(s) : ${item.tags}
+                            </div>
+
+                        </div>
+                        `;
+                    });
+
+                    output += `
+                        <div class="footer">
+                            &copy;${jsonData.generator}
+                        </div>
+
+                    </div>
+                    `;
+
+                    document.getElementById("hasil").innerHTML = output;
+                })
+                .catch(error => console.error("Gagal mengambil data:", error));
+        }
+    </script>
+
+</body>
+
+</html>

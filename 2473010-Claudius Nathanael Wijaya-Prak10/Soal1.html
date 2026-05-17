@@ -1,0 +1,111 @@
+<!--Claudius Nathanael Wijaya-->
+<!--2473010-->
+<!--12/05/2026-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #box {
+            border: 1px solid black;
+            width: 250px;
+            height: 110px;
+        }
+
+        #Search {
+            margin-left: 2%;
+        }
+
+        table,
+        tr,
+        td,
+        th {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: black;
+            color: white;
+        }
+        tbody tr:nth-child(odd) {
+            background-color: #FFFFCC;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #CCFFAA;
+        }
+    </style>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $("#Search").click(function () {
+
+                var kelas = $(":radio[name='kategori']:checked").val();
+
+                var fileJSON = "";
+
+                if (kelas == "all") {
+                    fileJSON = "nilai.js";
+                }
+                else if (kelas == "A") {
+                    fileJSON = "nilaiA.js";
+                }
+                else if (kelas == "B") {
+                    fileJSON = "nilaiB.js";
+                }
+
+                $.getJSON(fileJSON, function (data) {
+
+                    var isi = "";
+
+                    isi += "<table>";
+                    isi += "<tr>";
+                    isi += "<th>NRP</th>";
+                    isi += "<th>NAMA</th>";
+                    isi += "<th>KELAS</th>";
+                    isi += "<th>NILAI AKHIR</th>";
+                    isi += "</tr>";
+
+                    $.each(data.nilai, function (i, item) {
+
+                        isi += "<tr>";
+                        isi += "<td>" + item.nrp + "</td>";
+                        isi += "<td>" + item.nama + "</td>";
+                        isi += "<td>" + item.kelas + "</td>";
+                        isi += "<td>" + item.nilaiakhir + "</td>";
+                        isi += "</tr>";
+
+                    });
+
+                    isi += "</table>";
+
+                    $("#hasil").html(isi);
+
+                });
+
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <h2>Selamat! Berikut adalah Daftar Mahasiswa yang mendapat 
+        <br>Nilai A Pemrograman Web SI Tahun Ajaran 2023/2024</h2>
+    <div id="box">
+        <br>
+        <input type="radio" id="all" name="kategori" value="all">
+        <label for="all">All</label> <br>
+        <input type="radio" id="kelasa" name="kategori" value="A">
+        <label for="kelasa">Kelas A</label> <br>
+        <input type="radio" id="kelasb" name="kategori" value="B">
+        <label for="kelasb">Kelas B</label> <br>
+        <button id="Search" onclick="">Search</button>
+    </div>
+    <br>
+    <div id="hasil"></div>
+</body>
+
+</html>
